@@ -1,11 +1,7 @@
-import ColorButtons from "./Buttons";
+const Box = ({boxColor}) => {
+  return (
+    <div className="w-40 h-32 rounded-lg shadow-lg  border border-black mb-5" style={{backgroundColor: boxColor}}></div>
+  );
+};
 
-const ColorBox = () => {
-    return ( 
-        <div>
-            <ColorButtons />
-        </div>
-     );
-}
- 
-export default ColorBox;
+export default Box;

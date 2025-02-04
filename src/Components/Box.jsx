@@ -1,7 +1,12 @@
+import '../App.css'
+import PropTypes from 'prop-types';
 const Box = ({boxColor}) => {
   return (
-    <div className="w-40 h-32 rounded-lg shadow-lg  border border-black mb-5" style={{backgroundColor: boxColor}}></div>
+    <div className="box-container" data-testid='colorBox' style={{backgroundColor: boxColor}}></div>
   );
 };
 
+Box.propTypes = {
+  boxColor : PropTypes.string
+}
 export default Box;

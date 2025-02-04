@@ -1,21 +1,27 @@
-const ColorButtons = ({ changeColor, allColors, check }) => {
+import "../App.css";
+import PropTypes from 'prop-types';
+const ColorButtons = ({ allColors, check }) => {
   return (
     <div>
       {allColors.map((color, index) => (
         <button
           key={index}
-          className="p-2 transition-transform hover:scale-110 border-2 py-3 px-6 mx-3"
+          data-testid="colorOption"
+          className="colorBtn"
           style={{ backgroundColor: color }}
-          onClick={()=> {
-            changeColor();
+          onClick={() => {
             check(color);
           }}
         >
-          {color}
+          PICK ME
         </button>
       ))}
     </div>
   );
 };
 
+ColorButtons.propTypes = {
+  allColors: PropTypes.array,
+  check: PropTypes.func
+}
 export default ColorButtons;

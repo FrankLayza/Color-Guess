@@ -1,9 +1,13 @@
+import PropTypes from 'prop-types';
 const Score = ({score}) => {
     return ( 
         <div>
-             {score}
+             <h2 data-testid="score">YOUR SCORE 🤪 = {score}</h2>
         </div>
      );
 }
  
+Score.propTypes = {
+     score : PropTypes.number
+}
 export default Score;

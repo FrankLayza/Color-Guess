@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #762fce;
+  background-color: #faf4f4;
   font-family: "Fredoka", sans-serif;
 }
 .container {
@@ -42,7 +42,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   border: none;
-  padding: 1rem 1.75rem;
+  padding: 1.3rem 2rem;
   margin: 0 0.75rem;
 }
 .colorBtn:hover {
@@ -121,7 +121,7 @@ nav {
   .group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
   .newGameButton {
     padding: 10px 12px;
@@ -134,7 +134,7 @@ nav {
   }
   .colorBtn {
     font-size: 0.9rem;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.75rem;
   }
   .status-message{
     font-size: 1rem;

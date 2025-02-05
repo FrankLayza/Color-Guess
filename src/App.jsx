@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Box from "./Components/Box";
-import ColorButtons from "./Components/Buttons";
-import Score from "./Components/Score";
+import Box from "./assets/Components/Box";
+import ColorButtons from "./assets/Components/Buttons";
+import Score from "./assets/Components/Score";
 import "./App.css";
 const App = () => {
   const [expectedColor, setExpectedColor] = useState("");

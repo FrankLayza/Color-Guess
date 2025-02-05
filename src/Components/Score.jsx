@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import '../App.css'
 const Score = ({score}) => {
     return ( 
         <div>
-             <h2 data-testid="score">YOUR SCORE 🤪 = {score}</h2>
+             <h2 data-testid="score" className='score'>YOUR SCORE 🤪 = {score}</h2>
         </div>
      );
 }

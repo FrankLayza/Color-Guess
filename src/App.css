@@ -85,8 +85,27 @@ nav {
 }
 .status-message{
   font-size: 1.5rem;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+.correct{
+  color: green;
+  animation: bounce 0.5s ease-in-out;
+}
+.wrong{
+  color: red;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes bounce{
+  0%, 100%{transform: translateY(0);}
+  50%{transform: translateY(-10px);}  
+}
+@keyframes shake{
+  0%{transform: translateX(-5px);}
+  50%{transform: translateX(5px);}
+  100%{transform: translateY(0);}
+}
+ 
 @media (max-width: 768px) {
   .container h1 {
     font-size: 2rem;
@@ -116,5 +135,8 @@ nav {
   .colorBtn {
     font-size: 0.9rem;
     padding: 0.8rem 1.5rem;
+  }
+  .status-message{
+    font-size: 1rem;
   }
 }

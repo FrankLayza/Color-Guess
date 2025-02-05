@@ -8,7 +8,7 @@ const App = () => {
   const [boxColor, setBoxColor] = useState();
   const [score, setScore] = useState(0);
   const [slicedArray, setSlicedArray] = useState([]);
-  const [status, setStatus] = useState({message: ''});
+  const [status, setStatus] = useState({message: '', type: ''});
 
   const allColors = [
     "red",
@@ -26,12 +26,16 @@ const App = () => {
   const checkMatchingColors = (color) => {
     if (color === expectedColor) {
       setScore((prev) => prev + 1);
-      setStatus({message : 'Great Job! You guessed it right'});
+      setStatus({message : 'Great Job! You guessed it right', type: 'correct'});
       updateBox();
     } else {
-      setStatus({message : 'Oops! Try Again'});
+      setStatus({message : 'Oops! Try Again', type: 'wrong'});
       console.log(color, "does not match");
     }
+
+    setTimeout(() => {
+      setStatus({message: '', type: ''})
+    }, 1200);
   };
 
   const updateBox = () => {
@@ -70,7 +74,7 @@ const App = () => {
         </button>
       </nav>
       <div className="container">
-        <h3 className={`status-message`}>{status.message}</h3>
+        <h3 className={`status-message ${status.type}`}>{status.message}</h3>
         <h1>GUESS THE CORRECT COLOR</h1>
         <p data-testid="gameInstructions" className="instructions">
           👉Pick the button that matches the color in the box 👈

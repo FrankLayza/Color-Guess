@@ -8,7 +8,7 @@ const App = () => {
   const [boxColor, setBoxColor] = useState();
   const [score, setScore] = useState(0);
   const [slicedArray, setSlicedArray] = useState([]);
-  const [status, setStatus] = useState({message: '', type: ''});
+  const [status, setStatus] = useState({ message: "", type: "" });
 
   const allColors = [
     "red",
@@ -26,15 +26,19 @@ const App = () => {
   const checkMatchingColors = (color) => {
     if (color === expectedColor) {
       setScore((prev) => prev + 1);
-      setStatus({message : 'Great Job! You guessed it right', type: 'correct'});
+      setStatus({
+        message: "Great Job! You guessed it right",
+        type: "correct",
+      });
       updateBox();
     } else {
-      setStatus({message : 'Oops! Try Again', type: 'wrong'});
+      setScore((prev) => prev - 1);
+      setStatus({ message: "Oops! Try Again", type: "wrong" });
       console.log(color, "does not match");
     }
 
     setTimeout(() => {
-      setStatus({message: '', type: ''})
+      setStatus({ message: "", type: "" });
     }, 1200);
   };
 
